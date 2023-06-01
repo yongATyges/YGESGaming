@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+</head>
+
+<body>
+<script language="javascript">
+function change(N) {
+
+  var ca="";
+  var randomN = Math.floor(Math.random() * 6) + 1;
+  if (randomN=1){
+	  ca="A";
+  }
+  else if (randomN=2){
+	  ca="B";
+  }
+  else if (randomN=3){
+	  ca="C";
+  }
+  else if (randomN=4){
+	  ca="D";
+  }
+  else if (randomN=5){
+	  ca="E";
+  }
+  else if (randomN=6){
+	  ca="F";
+  }
+  var randomA = Math.floor(Math.random() * 5) + 1;
+  
+  // 生成圖片的路徑
+  var imagePathA = ca + randomA + '.jpg';
+  
+  // 將圖片路徑設定到 <img> 標籤的 src 屬性上，以顯示圖片
+  var changing= document.getElementById("F"+N);
+  changing.src = imagePathA;
+}
+</script>
+<div>
+<img id="F1" onclick="change(1);" width=40% src="def.jpg"  />
+<img id="F2" onclick="change(2);" width=40% src="def.jpg" /></div>
+<br />
+<div>
+<img id="F3" onclick="change(3);" width=40% src="def.jpg" />
+<img id="F4" onclick="change(4);" width=40% src="def.jpg" />
+</div>
+</body>
+</body>
+</html>
