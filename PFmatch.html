@@ -11,24 +11,25 @@ function change(N) {
 
   var ca="";
   var randomN = Math.floor(Math.random() * 5) + 1;
-  if (randomN=1){
+    alert(randomN);
+  if (randomN==1){
 	  ca="A";
   }
-  else if (randomN=2){
+  else if (randomN==2){
 	  ca="B";
   }
-  else if (randomN=3){
+  else if (randomN==3){
 	  ca="C";
   }
-  else if (randomN=4){
+  else if (randomN==4){
 	  ca="D";
   }
-  else if (randomN=5){
+  else if (randomN==5){
 	  ca="E";
   }
 
   var randomA = Math.floor(Math.random() * 3) + 1;
-  
+   alert(ca);
   // 生成圖片的路徑
   var imagePathA = ca + randomA + '.jpg';
   
@@ -37,14 +38,14 @@ function change(N) {
   changing.src = imagePathA;
 }
 </script>
-<div>
+<div height=40%>
 <img id="F1" onclick="change(1);" width=40% height=40% src="def.jpg"  />
 <img id="F2" onclick="change(2);" width=40% height=40% src="def.jpg" /></div>
 <br />
 <div>
 <img id="F3" onclick="change(3);" width=40% height=40% src="def.jpg" />
 <img id="F4" onclick="change(4);" width=40% height=40% src="def.jpg" />
-</div>
+</div height=40%>
 </body>
 </body>
 </html>
