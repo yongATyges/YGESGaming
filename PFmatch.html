@@ -10,7 +10,7 @@
 function change(N) {
 
   var ca="";
-  var randomN = Math.floor(Math.random() * 6) + 1;
+  var randomN = Math.floor(Math.random() * 5) + 1;
   if (randomN=1){
 	  ca="A";
   }
@@ -26,10 +26,8 @@ function change(N) {
   else if (randomN=5){
 	  ca="E";
   }
-  else if (randomN=6){
-	  ca="F";
-  }
-  var randomA = Math.floor(Math.random() * 5) + 1;
+
+  var randomA = Math.floor(Math.random() * 4) + 1;
   
   // 生成圖片的路徑
   var imagePathA = ca + randomA + '.jpg';
