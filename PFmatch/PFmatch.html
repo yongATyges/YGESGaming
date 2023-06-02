@@ -7,6 +7,10 @@
 
 <body>
 <script language="javascript">
+window.addEventListener("load",function(){
+
+  reSize();
+});
 function change(N) {
 	const audio = document.createElement("audio");
         audio.src = "coin01.mp3";
@@ -39,14 +43,36 @@ function change(N) {
   var changing= document.getElementById("F"+N);
   changing.src = imagePathA;
 }
-</script>
+
+
+  function reSize() {
+	    var divElement = document.getElementById('outer');
+  var img1Element = document.getElementById('F1');
+  var img2Element = document.getElementById('F2');
+  var img3Element = document.getElementById('F3');
+  var img4Element = document.getElementById('F4');
+    divElement.style.width = window.innerWidth + 'px';
+    divElement.style.height = window.innerHeight + 'px';
+	var isize = window.innerHeight;
+	isize= Math.floor(isize*0.45);
+	var strsize=isize+"px";
+	img1Element.style.height=isize+"px";
+	img2Element.style.height=isize+"px";
+	img3Element.style.height=isize+"px";
+	img4Element.style.height=isize+"px";
+  }
+
+  </script>
+
+ <div id='outer'>
 <div>
-<img id="F1" onclick="change(1);" width=40% src="def.jpg"  />
-<img id="F2" onclick="change(2);" width=40% src="def.jpg" /></div>
+<img id="F1" onclick="change(1);" src="def.jpg"  />
+<img id="F2" onclick="change(2);" src="def.jpg" /></div>
 <br />
 <div>
-<img id="F3" onclick="change(3);" width=40% src="def.jpg" />
-<img id="F4" onclick="change(4);" width=40% src="def.jpg" />
+<img id="F3" onclick="change(3);" src="def.jpg" />
+<img id="F4" onclick="change(4);" src="def.jpg" />
+</div>
 </div>
 </body>
 </body>
